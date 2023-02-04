@@ -20,11 +20,14 @@ Route::get('/', function () {
 
 Route::get('user/', [UserAuthController::class, 'index'])->name('user.home')->middleware("auth:web");
 Route::get('user/login', [UserAuthController::class, 'login'])->name('user.login');
+Route::get('user/register', [UserAuthController::class, 'register'])->name('user.register');
 Route::get('user/logout', [UserAuthController::class, 'logout'])->name('user.logout');
 Route::post('user/login', [UserAuthController::class, 'handleLogin'])->name('user.handleLogin');
     
+
 Route::get('vendor/', [VendorAuthController::class, 'index'])->name('vendor.home')->middleware('auth:webvendor');
 Route::get('vendor/login', [VendorAuthController::class, 'login'])->name('vendor.login');
+Route::get('vendor/register', [VendorAuthController::class, 'register'])->name('vendor.register');
 Route::post('vendor/login', [VendorAuthController::class, 'handleLogin'])->name('vendor.handleLogin');
 Route::get('vendor/logout', [VendorAuthController::class, 'index'])->name('vendor.logout');   
 

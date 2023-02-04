@@ -17,6 +17,11 @@ class UserAuthController extends Controller
         return view('roleModule.user.login');
     }
 
+    public function register()
+    {
+        return view('roleModule.user.register');
+    }
+
     public function handleLogin(Request $req)
     {
         if(Auth::attempt(

@@ -17,6 +17,11 @@ class VendorAuthController extends Controller
         return view('roleModule.vendor.login');
     }
 
+    public function register()
+    {
+        return view('roleModule.vendor.register');
+    }
+
     public function handleLogin(Request $req)
     {
         if(Auth::guard('webvendor')
