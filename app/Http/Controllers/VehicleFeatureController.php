@@ -4,7 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Models\VehicleFeature;
 use Illuminate\Http\Request;
-
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 class VehicleFeatureController extends Controller
 {
     /**
@@ -14,7 +15,8 @@ class VehicleFeatureController extends Controller
      */
     public function index()
     {
-        //
+        $data = DB::table('vehicle_features')->orderBy('created_at', 'desc')->get();  
+        return view('vehicleModule.feature.index',compact('data'));
     }
 
     /**

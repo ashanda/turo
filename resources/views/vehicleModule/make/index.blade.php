@@ -9,17 +9,17 @@
           <table class="table table-dark">
             <thead>
               <tr>
-                <th>Experience</th>
+                <th>Make</th>
                 <th>Actions</th>
               </tr>
             </thead>
             <tbody class="table-border-bottom-0">
               
-            @foreach ($data as $experince)  
+            @foreach ($data as $make)  
               <tr> 
-                <td>{{ $experince->experience }}</td>
+                <td>{{ $make->make }}</td>
                 <td>
-                    <a class="btn rounded-pill btn-outline-primary" href="{{ route('experince.edit',$experince->id) }}">View</a>
+                    <a class="btn rounded-pill btn-outline-primary" href="{{ route('make.edit',$make->id) }}">View</a>
                   </div>
                 </td>
               </tr>
@@ -29,6 +29,5 @@
         </div>
       </div>
     </div>
-    <!-- / Content --> 
-
+    <!-- / Content -->  
 @endsection

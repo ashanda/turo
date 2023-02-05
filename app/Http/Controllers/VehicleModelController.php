@@ -4,7 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Models\VehicleModel;
 use Illuminate\Http\Request;
-
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 class VehicleModelController extends Controller
 {
     /**
@@ -14,7 +15,8 @@ class VehicleModelController extends Controller
      */
     public function index()
     {
-        //
+        $data = DB::table('vehicle_models')->orderBy('created_at', 'desc')->get();  
+        return view('vehicleModule.model.index',compact('data'));
     }
 
     /**

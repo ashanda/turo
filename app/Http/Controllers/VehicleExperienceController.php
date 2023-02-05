@@ -4,7 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Models\VehicleExperience;
 use Illuminate\Http\Request;
-
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 class VehicleExperienceController extends Controller
 {
     /**
@@ -14,7 +15,8 @@ class VehicleExperienceController extends Controller
      */
     public function index()
     {
-        //
+        $data = DB::table('vehicle_experiences')->orderBy('created_at', 'desc')->get();  
+        return view('vehicleModule.experince.index',compact('data'));
     }
 
     /**

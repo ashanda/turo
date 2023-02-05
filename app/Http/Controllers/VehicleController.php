@@ -4,7 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Models\Vehicle;
 use Illuminate\Http\Request;
-
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 class VehicleController extends Controller
 {
     /**
@@ -14,7 +15,19 @@ class VehicleController extends Controller
      */
     public function index()
     {
-        //
+        if(Auth::user()->role == 2){
+
+            $data = DB::table('vehicles')->orderBy('created_at', 'desc')->get();  
+            return view('vehicleModule.vehicle.index',compact('data'));
+
+
+        }
+        if(Auth::user()->role == 1){
+
+            $data = DB::table('vehicles')->where('vendor_id',Auth::user()->id)->orderBy('created_at', 'desc')->get();  
+            return view('vehicleModule.vehicle.index',compact('data'));
+        }
+        
     }
 
     /**
