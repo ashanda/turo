@@ -15,6 +15,7 @@ return new class extends Migration
     {
         Schema::create('vendors', function (Blueprint $table) {
             $table->id();
+            $table->string('profile_pic')->default('avatar.png');
             $table->string('company_name');
             $table->string('company_reg_no');
             $table->string('company_reg_certificate');
@@ -27,7 +28,9 @@ return new class extends Migration
             $table->string('contact_person');
             $table->string('contact_no');
             $table->string('chamber_of_commerce_certificate');
-            $table->string('user_rating');
+            $table->string('user_rating')->nullable();
+            $table->integer('status')->default(0);
+            $table->integer('role')->default(1);
             $table->rememberToken();
             $table->timestamps();
         });

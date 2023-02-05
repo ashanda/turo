@@ -58,8 +58,18 @@
                               </div>
                             </div>
                             <div class="flex-grow-1">
-                              <span class="fw-semibold d-block">John Doe</span>
+                              
+                              @if (Auth::user()->role == 2)
+                              <span class="fw-semibold d-block">{{ Auth::user()->name }}</span>
                               <small class="text-muted">Admin</small>
+                              @elseif (Auth::user()->role == 1)
+                              <span class="fw-semibold d-block">{{ Auth::user()->company_name }}</span>
+                              <small class="text-muted">Vendor</small>
+                              @else
+                              <span class="fw-semibold d-block">{{ Auth::user()->fname.' '.Auth::user()->lname}}</span>
+                              <small class="text-muted">Customer</small>
+                              @endif
+                              
                             </div>
                           </div>
                         </a>

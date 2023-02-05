@@ -15,7 +15,7 @@ return new class extends Migration
     {
         Schema::create('users', function (Blueprint $table) {
             $table->id();
-            $table->string('profile_pic');
+            $table->string('profile_pic')->default('avatar.png');
             $table->string('fname');
             $table->string('lname');
             $table->string('email')->unique();
@@ -32,7 +32,8 @@ return new class extends Migration
             $table->string('driving_license_front');
             $table->string('driving_license_back');
             $table->string('driving_license_expire_date');
-            $table->integer('status');
+            $table->integer('status')->default(0);
+            $table->integer('role')->default(0);
             $table->rememberToken();
             $table->timestamps();
         });

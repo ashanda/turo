@@ -64,7 +64,7 @@
 
   <body>
     <!-- Content -->
-
+    @include('sweetalert::alert')
     <div class="container-xxl">
       <div class="authentication-wrapper authentication-basic container-p-y">
         <div class="authentication-inner">
@@ -132,6 +132,7 @@
                   <span class="app-brand-text demo text-body fw-bolder">Sneat</span>
                 </a>
               </div>
+   
     @yield('content')
  <!-- Core JS -->
     <!-- build:js assets/vendor/js/core.js -->

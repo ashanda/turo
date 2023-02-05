@@ -71,7 +71,7 @@
       <div class="layout-container">
         @include('layout.side_bar')
         @include('layout.header')
-
+        @include('sweetalert::alert')
         @yield('content')
 
 
@@ -121,14 +121,7 @@
   </div>
   <!-- / Layout wrapper -->
 
-  <div class="buy-now">
-    <a
-      href="https://themeselection.com/products/sneat-bootstrap-html-admin-template/"
-      target="_blank"
-      class="btn btn-danger btn-buy-now"
-      >Upgrade to Pro</a
-    >
-  </div>
+  
 
   <!-- Core JS -->
   <!-- build:js assets/vendor/js/core.js -->
@@ -151,5 +144,20 @@
 
   <!-- Place this tag in your head or just before your close body tag. -->
   <script async defer src="https://buttons.github.io/buttons.js"></script>
+  <script>
+
+    $( document ).ready(function() {
+    $('#accountActivation').click(function () {
+    //check if checkbox is checked
+        if ($(this).is(':checked')) {
+            
+            $('#accountdelete').removeAttr('disabled'); //enable input
+            
+        } else {
+            $('#accountdelete').attr('disabled', true); //disable input
+        }
+    })
+  });
+  </script>
 </body>
 </html>     

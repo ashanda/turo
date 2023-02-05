@@ -47,7 +47,7 @@
 
               <p class="text-center">
                 <span>New on our platform?</span>
-                <a href="auth-register-basic.html">
+                <a href="{{ route('vendor.register') }}">
                   <span>Create an account</span>
                 </a>
               </p>
