@@ -6,6 +6,7 @@ use App\Models\VehicleModel;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
+use RealRashid\SweetAlert\Facades\Alert;
 class VehicleModelController extends Controller
 {
     /**
@@ -26,7 +27,8 @@ class VehicleModelController extends Controller
      */
     public function create()
     {
-        //
+        $data = DB::table('vehicle_makes')->orderBy('created_at', 'desc')->get();  
+        return view('vehicleModule.model.create',compact('data'));
     }
 
     /**
@@ -37,7 +39,14 @@ class VehicleModelController extends Controller
      */
     public function store(Request $request)
     {
-        //
+           $request->validate(['model' => 'required']);
+
+            $model = new Vehiclemodel;
+            $model->model= $request->model;
+            $model->make= $request->make_id;
+            $model->save();
+            Alert::toast('Model Add Sucess', 'success'); 
+            return redirect()->route('model.index');
     }
 
     /**
@@ -57,9 +66,11 @@ class VehicleModelController extends Controller
      * @param  \App\Models\VehicleModel  $vehicleModel
      * @return \Illuminate\Http\Response
      */
-    public function edit(VehicleModel $vehicleModel)
+    public function edit($id)
     {
-        //
+            $model = VehicleModel::find($id);
+            $data = DB::table('vehicle_makes')->orderBy('created_at', 'desc')->get();  
+            return view('vehicleModule.model.edit',compact('model','id','data'));
     }
 
     /**
@@ -69,9 +80,14 @@ class VehicleModelController extends Controller
      * @param  \App\Models\VehicleModel  $vehicleModel
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, VehicleModel $vehicleModel)
+    public function update(Request $request, $id)
     {
-        //
+                $model = VehicleModel::find($id);
+                $model->model = $request->model;
+                $model->make = $request->make_id;
+                $model->save();
+                Alert::toast('Model Update Sucess', 'success'); 
+                return redirect()->route('model.index');
     }
 
     /**

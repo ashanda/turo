@@ -6,6 +6,7 @@ use App\Models\VehicleFeature;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
+use RealRashid\SweetAlert\Facades\Alert;
 class VehicleFeatureController extends Controller
 {
     /**
@@ -26,7 +27,7 @@ class VehicleFeatureController extends Controller
      */
     public function create()
     {
-        //
+        return view('vehicleModule.feature.create');
     }
 
     /**
@@ -37,7 +38,14 @@ class VehicleFeatureController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate(['feature' => 'required']);
+
+        $feature = new VehicleFeature;
+        $feature->name= $request->feature;
+        $feature->icon = $request->icon;
+        $feature->save();
+        Alert::toast('Feature Add Sucess', 'success'); 
+        return redirect()->route('feature.index');
     }
 
     /**
@@ -57,9 +65,10 @@ class VehicleFeatureController extends Controller
      * @param  \App\Models\VehicleFeature  $vehicleFeature
      * @return \Illuminate\Http\Response
      */
-    public function edit(VehicleFeature $vehicleFeature)
+    public function edit($id)
     {
-        //
+        $feature = VehicleFeature::find($id);
+        return view('vehicleModule.feature.edit',compact('feature','id'));
     }
 
     /**
@@ -69,9 +78,14 @@ class VehicleFeatureController extends Controller
      * @param  \App\Models\VehicleFeature  $vehicleFeature
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, VehicleFeature $vehicleFeature)
+    public function update(Request $request, $id)
     {
-        //
+        $feature = VehicleFeature::find($id);
+        $feature->name = $request->feature;
+        $feature->icon = $request->icon;
+        $feature->save();
+        Alert::toast('Feature Update Sucess', 'success'); 
+        return redirect()->route('feature.index');
     }
 
     /**

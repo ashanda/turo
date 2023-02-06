@@ -3,6 +3,9 @@
 <!-- Content wrapper -->
 <div class="container-xxl flex-grow-1 container-p-y">
     <!-- Content -->
+    <div class="demo-inline-spacing text-end pb-2">
+      <a class="btn rounded-pill btn-outline-primary" href="{{ route('make.create') }}"> <span class="tf-icons bx bx-plus"></span>&nbsp; Add Make</a>
+    </div>
     <div class="card">
        
         <div class="table-responsive text-nowrap">

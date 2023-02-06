@@ -6,6 +6,7 @@ use App\Models\VehicleCategory;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
+use RealRashid\SweetAlert\Facades\Alert;
 
 class VehicleCategoryController extends Controller
 {
@@ -27,7 +28,7 @@ class VehicleCategoryController extends Controller
      */
     public function create()
     {
-        //
+        return view('vehicleModule.category.create');
     }
 
     /**
@@ -38,7 +39,13 @@ class VehicleCategoryController extends Controller
      */
     public function store(Request $request)
     {
-        //
+            $request->validate(['category' => 'required']);
+
+            $category = new VehicleCategory;
+            $category->category= $request->category;
+            $category->save();
+            Alert::toast('Vehicle Category Added Sucess', 'success'); 
+            return redirect()->route('category.index');
     }
 
     /**
@@ -58,9 +65,10 @@ class VehicleCategoryController extends Controller
      * @param  \App\Models\VehicleCategory  $vehicleCategory
      * @return \Illuminate\Http\Response
      */
-    public function edit(VehicleCategory $vehicleCategory)
+    public function edit($id)
     {
-        //
+            $category = VehicleCategory::find($id);
+            return view('vehicleModule.category.edit',compact('category','id'));
     }
 
     /**
@@ -70,9 +78,13 @@ class VehicleCategoryController extends Controller
      * @param  \App\Models\VehicleCategory  $vehicleCategory
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, VehicleCategory $vehicleCategory)
+    public function update(Request $request, $id)
     {
-        //
+        $category = VehicleCategory::find($id);
+        $category->category = $request->category;
+        $category->save();
+        Alert::toast('category Update Sucess', 'success'); 
+        return redirect()->route('category.index');
     }
 
     /**

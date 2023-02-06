@@ -6,6 +6,7 @@ use App\Models\VehicleMake;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
+use RealRashid\SweetAlert\Facades\Alert;
 class VehicleMakeController extends Controller
 {
     /**
@@ -26,7 +27,7 @@ class VehicleMakeController extends Controller
      */
     public function create()
     {
-        //
+        return view('vehicleModule.make.create');
     }
 
     /**
@@ -37,7 +38,13 @@ class VehicleMakeController extends Controller
      */
     public function store(Request $request)
     {
-        //
+            $request->validate(['make' => 'required']);
+
+            $make = new VehicleMake;
+            $make->make= $request->make;
+            $make->save();
+            Alert::toast('Make Add Sucess', 'success'); 
+            return redirect()->route('make.index');
     }
 
     /**
@@ -57,9 +64,10 @@ class VehicleMakeController extends Controller
      * @param  \App\Models\VehicleMake  $vehicleMake
      * @return \Illuminate\Http\Response
      */
-    public function edit(VehicleMake $vehicleMake)
+    public function edit($id)
     {
-        //
+            $make = VehicleMake::find($id);
+            return view('vehicleModule.make.edit',compact('make','id'));
     }
 
     /**
@@ -69,9 +77,13 @@ class VehicleMakeController extends Controller
      * @param  \App\Models\VehicleMake  $vehicleMake
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, VehicleMake $vehicleMake)
+    public function update(Request $request, $id)
     {
-        //
+                $make = VehicleMake::find($id);
+                $make->make = $request->make;
+                $make->save();
+                Alert::toast('Make Update Sucess', 'success'); 
+                return redirect()->route('make.index');
     }
 
     /**

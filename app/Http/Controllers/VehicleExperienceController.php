@@ -6,6 +6,8 @@ use App\Models\VehicleExperience;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
+use RealRashid\SweetAlert\Facades\Alert;
+
 class VehicleExperienceController extends Controller
 {
     /**
@@ -26,7 +28,7 @@ class VehicleExperienceController extends Controller
      */
     public function create()
     {
-        //
+        return view('vehicleModule.experince.create');
     }
 
     /**
@@ -37,7 +39,13 @@ class VehicleExperienceController extends Controller
      */
     public function store(Request $request)
     {
-        //
+            $request->validate(['experince' => 'required']);
+
+            $experince = new VehicleExperience;
+            $experince->experience= $request->experince;
+            $experince->save();
+            Alert::toast('Experince Add Sucess', 'success'); 
+            return redirect()->route('experince.index');
     }
 
     /**
@@ -57,9 +65,10 @@ class VehicleExperienceController extends Controller
      * @param  \App\Models\VehicleExperience  $vehicleExperience
      * @return \Illuminate\Http\Response
      */
-    public function edit(VehicleExperience $vehicleExperience)
+    public function edit($id)
     {
-        //
+        $experince = VehicleExperience::find($id);
+        return view('vehicleModule.experince.edit',compact('experince','id'));
     }
 
     /**
@@ -69,9 +78,13 @@ class VehicleExperienceController extends Controller
      * @param  \App\Models\VehicleExperience  $vehicleExperience
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, VehicleExperience $vehicleExperience)
+    public function update(Request $request, $id)
     {
-        //
+        $experince = VehicleExperience::find($id);
+        $experince->experience = $request->experince;
+        $experince->save();
+        Alert::toast('Experince Update Sucess', 'success'); 
+        return redirect()->route('experince.index');
     }
 
     /**

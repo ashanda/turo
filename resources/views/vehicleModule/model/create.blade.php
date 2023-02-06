@@ -10,13 +10,12 @@
         <div class="card mb-4">
          
           <div class="card-body">
-            <form action="{{ route('model.update',$id) }}" method="POST" enctype="multipart/form-data">
+            <form action="{{ route('model.store') }}" method="POST" enctype="multipart/form-data">
                 @csrf
-                @method('PUT')
               <div class="row mb-3">
                 <label class="col-sm-2 col-form-label" for="basic-default-name">Model Name</label>
                 <div class="col-sm-10">
-                  <input type="text" class="form-control" id="basic-default-name" name="model" value="{{ $model->model }}">
+                  <input type="text" class="form-control" id="basic-default-name" name="model" placeholder="Toyota">
                 </div>
               </div>
 

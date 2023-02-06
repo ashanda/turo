@@ -1,8 +1,7 @@
 @extends('layout.dashboard') 
 @section('content')
 <div class="container-xxl flex-grow-1 container-p-y">
-    <h4 class="fw-bold py-3 mb-4"><span class="text-muted fw-light"></span>Experince</h4>
-
+    <h4 class="fw-bold py-3 mb-4"><span class="text-muted fw-light"></span>Make</h4>
     <!-- Basic Layout & Basic with Icons -->
     <div class="row">
       <!-- Basic Layout -->
@@ -10,13 +9,12 @@
         <div class="card mb-4">
           
           <div class="card-body">
-            <form action="{{ route('experince.update',$id) }}" method="POST" enctype="multipart/form-data">
+            <form action="{{ route('make.store') }}" method="POST" enctype="multipart/form-data">
                 @csrf
-                @method('PUT')
               <div class="row mb-3">
-                <label class="col-sm-2 col-form-label" for="basic-default-name">Experince</label>
+                <label class="col-sm-2 col-form-label" for="basic-default-name">Make Name</label>
                 <div class="col-sm-10">
-                  <input type="text" class="form-control" id="basic-default-name" name="experince" value="{{ $experince->experience }}">
+                  <input type="text" class="form-control" id="basic-default-name" name="make" placeholder="Toyota">
                 </div>
               </div>
               <div class="row justify-content-end">
