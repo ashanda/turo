@@ -22,7 +22,12 @@
                 <div class="row">
                 <label class="col-sm-4 col-form-label" for="basic-default-company">Make</label>
                 <div class="col-sm-8">
-                  <input type="text" class="form-control" id="basic-default-company" placeholder="ACME Inc.">
+                  <select id="defaultSelect" class="form-select">
+                    <option>Default select</option>
+                    <option value="1">One</option>
+                    <option value="2">Two</option>
+                    <option value="3">Three</option>
+                  </select>
                 </div>
                 </div>
               </div>
@@ -30,7 +35,12 @@
                 <div class="row">
                 <label class="col-sm-2 col-form-label" for="basic-default-company">Model</label>
                 <div class="col-sm-10">
-                  <input type="text" class="form-control" id="basic-default-company" placeholder="ACME Inc.">
+                  <select id="defaultSelect" class="form-select">
+                    <option>Default select</option>
+                    <option value="1">One</option>
+                    <option value="2">Two</option>
+                    <option value="3">Three</option>
+                  </select>
                 </div>
               </div>
               </div>
@@ -46,7 +56,12 @@
                 <div class="row">
                 <label class="col-sm-4 col-form-label" for="basic-default-company">Year</label>
                 <div class="col-sm-8">
-                  <input type="text" class="form-control" id="basic-default-company" placeholder="ACME Inc.">
+                  <select id="defaultSelect" class="form-select">
+                    <option>Default select</option>
+                    <option value="1">One</option>
+                    <option value="2">Two</option>
+                    <option value="3">Three</option>
+                  </select>
                 </div>
                 </div>
               </div>
@@ -54,7 +69,12 @@
                 <div class="row">
                 <label class="col-sm-2 col-form-label" for="basic-default-company">Category</label>
                 <div class="col-sm-10">
-                  <input type="text" class="form-control" id="basic-default-company" placeholder="ACME Inc.">
+                  <select id="defaultSelect" class="form-select">
+                    <option>Default select</option>
+                    <option value="1">One</option>
+                    <option value="2">Two</option>
+                    <option value="3">Three</option>
+                  </select>
                 </div>
               </div>
               </div>
@@ -64,7 +84,12 @@
                 <div class="row">
                 <label class="col-sm-4 col-form-label" for="basic-default-company">Vehicle Condition</label>
                 <div class="col-sm-8">
-                  <input type="text" class="form-control" id="basic-default-company" placeholder="ACME Inc.">
+                  <select id="defaultSelect" class="form-select">
+                    <option>Default select</option>
+                    <option value="1">One</option>
+                    <option value="2">Two</option>
+                    <option value="3">Three</option>
+                  </select>
                 </div>
                 </div>
               </div>
@@ -72,7 +97,12 @@
                 <div class="row">
                 <label class="col-sm-2 col-form-label" for="basic-default-company">Type</label>
                 <div class="col-sm-10">
-                  <input type="text" class="form-control" id="basic-default-company" placeholder="ACME Inc.">
+                  <select id="defaultSelect" class="form-select">
+                    <option>Default select</option>
+                    <option value="1">One</option>
+                    <option value="2">Two</option>
+                    <option value="3">Three</option>
+                  </select>
                 </div>
               </div>
               </div>
@@ -82,7 +112,12 @@
                 <div class="row">
                 <label class="col-sm-4 col-form-label" for="basic-default-company">No Seat</label>
                 <div class="col-sm-8">
-                  <input type="text" class="form-control" id="basic-default-company" placeholder="ACME Inc.">
+                  <select id="defaultSelect" class="form-select">
+                    <option>Default select</option>
+                    <option value="1">One</option>
+                    <option value="2">Two</option>
+                    <option value="3">Three</option>
+                  </select>
                 </div>
                 </div>
               </div>
@@ -96,11 +131,44 @@
               </div>
             </div>
             <div class="row">
+              <div class="col-md-6 mb-3">
+                <div class="row">
+                <label class="col-sm-4 col-form-label" for="basic-default-company">Vehicle Experince</label>
+                <div class="col-sm-8">
+                  <select id="defaultSelect" class="form-select">
+                    <option>Default select</option>
+                    <option value="1">One</option>
+                    <option value="2">Two</option>
+                    <option value="3">Three</option>
+                  </select>
+                </div>
+                </div>
+              </div>
+              <div class="col-md-6 mb-3">
+                <div class="row">
+                <label class="col-sm-2 col-form-label" for="basic-default-company">Vehicle Features</label>
+                <div class="col-sm-10">
+                  <select id="defaultSelect" class="form-select">
+                    <option>Default select</option>
+                    <option value="1">One</option>
+                    <option value="2">Two</option>
+                    <option value="3">Three</option>
+                  </select>
+                </div>
+              </div>
+              </div>
+            </div>
+            <div class="row">
               <div class="col-md-12 mb-3">
                 <div class="row">
                 <label class="col-sm-2 col-form-label" for="basic-default-company">Transmission</label>
                 <div class="col-sm-10">
-                  <input type="text" class="form-control" id="basic-default-company" placeholder="ACME Inc.">
+                  <select id="defaultSelect" class="form-select">
+                    <option>Default select</option>
+                    <option value="1">One</option>
+                    <option value="2">Two</option>
+                    <option value="3">Three</option>
+                  </select>
                 </div>
                 </div>
               </div> 

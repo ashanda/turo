@@ -37,7 +37,12 @@ class VehicleController extends Controller
      */
     public function create()
     {
-        return view('vehicleModule.vehicle.create');
+        $categorys = DB::table('users')->get();
+        $types =  DB::table('users')->get();
+        $features = DB::table('users')->get();
+        $experinces =  DB::table('users')->get();
+        
+        return view('vehicleModule.vehicle.create',compact('categorys','types','features','experinces'));
     }
 
     /**
