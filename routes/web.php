@@ -14,6 +14,7 @@ use App\Http\Controllers\VehicleTypeController;
 use App\Http\Controllers\VehicleController;
 use App\Models\VehicleMake;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Http\Request;
 
 
 
