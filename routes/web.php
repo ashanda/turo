@@ -12,6 +12,9 @@ use App\Http\Controllers\VehicleModelController;
 use App\Http\Controllers\VehicleCategoryController;
 use App\Http\Controllers\VehicleTypeController;
 use App\Http\Controllers\VehicleController;
+use App\Models\VehicleMake;
+use Illuminate\Support\Facades\DB;
+
 
 
 /*
@@ -25,9 +28,15 @@ use App\Http\Controllers\VehicleController;
 |
 */
 Route::get('/', function () {
-    return view('frontend.welcome');
+    $s = VehicleMake::all();
+    return view('frontend.welcome',compact('s'));
 });
 
+Route::get('/ajax-subcat',function (Request $request) {
+    $cat_id = $request->cat_id;
+    $subcategories = DB::table('vehicle_models')->where('make', '=',$cat_id)->get();
+    return Response::json($subcategories);
+});
 
 Route::get('user/', [UserAuthController::class, 'index'])->name('user.home')->middleware("auth:web");
 Route::get('user/login', [UserAuthController::class, 'login'])->name('user.login');

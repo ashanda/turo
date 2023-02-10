@@ -13,8 +13,9 @@
                       class="form-select bg-danger text-light"
                       aria-label="Default select example"
                     >
-                      <option selected>BMW</option>
-                      <option value="1">AUDI</option>
+                    @foreach($brands as $brands)
+                    <option value="{{ $brands->id }}">{{ $brands->make }}</option>
+                    @endforeach
                     </select>
                   </div>
                   <div class="col-sm-6 col-md-6 col-lg-3">
@@ -23,8 +24,9 @@
                       class="form-select bg-danger text-light"
                       aria-label="Default select example"
                     >
-                      <option selected>i8</option>
-                      <option value="1">520d</option>
+                    @foreach($models as $model)
+                    <option value="{{ $model->id }}">{{ $model->model }}</option>
+                    @endforeach
                     </select>
                   </div>
                   <div class="col-sm-6 col-md-6 col-lg-3">
