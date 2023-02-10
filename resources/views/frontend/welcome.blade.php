@@ -13,20 +13,18 @@
                       class="form-select bg-danger text-light"
                       aria-label="Default select example"
                     >
-                    @foreach($brands as $brands)
-                    <option value="{{ $brands->id }}">{{ $brands->make }}</option>
+                    @foreach($S as $brand)
+                    <option value="{{ $brand->id }}">{{ $brand->make }}</option>
                     @endforeach
                     </select>
                   </div>
                   <div class="col-sm-6 col-md-6 col-lg-3">
                     <label class="text-light form-label" for="">model</label>
-                    <select
-                      class="form-select bg-danger text-light"
-                      aria-label="Default select example"
-                    >
-                    @foreach($models as $model)
-                    <option value="{{ $model->id }}">{{ $model->model }}</option>
-                    @endforeach
+                   
+                    <select name="subcategory" id="subcategory" class="form-select bg-danger text-light" aria-label="Default select example">
+                      <option value=""></option>
+                    </select>
+              
                     </select>
                   </div>
                   <div class="col-sm-6 col-md-6 col-lg-3">
