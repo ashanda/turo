@@ -115,7 +115,7 @@
                 var subcat =  $('#subcategory').empty();
                 $.each(data,function(create,subcatObj){
                     var option = $('<option/>', {id:create, value:subcatObj});
-                    subcat.append('<option value ="'+subcatObj['name']+'">'+subcatObj['name']+'</option>');
+                    subcat.append('<option value ="'+subcatObj['id']+'">'+subcatObj['model']+'</option>');
                 });
             });
         });
