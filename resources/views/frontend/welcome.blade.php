@@ -13,7 +13,7 @@
                       class="form-select bg-danger text-light"
                       aria-label="Default select example"
                     >
-                    @foreach($S as $brand)
+                    @foreach($s as $brand)
                     <option value="{{ $brand->id }}">{{ $brand->make }}</option>
                     @endforeach
                     </select>
