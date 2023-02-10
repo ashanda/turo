@@ -34,7 +34,7 @@ Route::get('/', function () {
 
 Route::get('/ajax-subcat',function (Request $request) {
     $cat_id = $request->cat_id;
-    $subcategories = DB::table('vehicle_models')->where('make', '=',$cat_id)->get();
+    $subcategories = DB::table('vehicle_models')->where('id', '=',$cat_id)->get();
     return Response::json($subcategories);
 });
 
