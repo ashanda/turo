@@ -10,13 +10,16 @@
                   <div class="col-sm-6 col-md-6 col-lg-3">
                     <label class="text-light form-label" for="">Brand</label>
                     <select
+                      name="category" id="category"
                       class="form-select bg-danger text-light"
                       aria-label="Default select example"
                     >
-                    @foreach($s as $brand)
-                    <option value="{{ $brand->id }}">{{ $brand->make }}</option>
-                    @endforeach
+                   
+                      @foreach($s as $k)
+                      <option value="{{ $k['id'] }}">{{ $k['make'] }}</option>
+                      @endforeach
                     </select>
+                    
                   </div>
                   <div class="col-sm-6 col-md-6 col-lg-3">
                     <label class="text-light form-label" for="">model</label>
