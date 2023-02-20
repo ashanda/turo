@@ -1,110 +1,147 @@
 /* Common CSS */
 .bg-trans {
-  background-color: rgba(255, 255, 255, 0.253) !important;
+    background-color: rgba(255, 255, 255, 0.253) !important;
 }
 .custom_container {
-  max-width: 1600px;
-  margin: auto;
+    max-width: 1600px;
+    margin: auto;
 }
 .sub_head {
-  font-size: 20px;
-  color: #dc3545;
+    font-size: 20px;
+    color: #dc3545;
 }
 .head {
-  font-size: 40px;
+    font-size: 40px;
 }
 .nav-link {
-  color: #000 !important;
-  text-transform: uppercase;
+    color: #000 !important;
+    text-transform: uppercase;
 }
 /* banner section */
 .bann {
-  height: 800px;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  position: relative;
+    height: 800px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: relative;
 }
 .bann_filter {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
 }
 .filt {
-  border-radius: 5px;
-  -webkit-box-shadow: 0px 11px 18px -3px rgba(0, 0, 0, 0.93);
-  box-shadow: 0px 11px 18px -3px rgba(0, 0, 0, 0.93);
+    border-radius: 5px;
+    -webkit-box-shadow: 0px 11px 18px -3px rgba(0, 0, 0, 0.93);
+    box-shadow: 0px 11px 18px -3px rgba(0, 0, 0, 0.93);
 }
 .filt label {
-  text-transform: uppercase;
+    text-transform: uppercase;
 }
 .form_sub {
-  border: none;
-  border-radius: 50%;
-  padding: 0;
+    border: none;
+    border-radius: 50%;
+    padding: 0;
 }
 .fa-play-circle-o {
-  background-color: #dc3545;
-  color: #fff;
+    background-color: #dc3545;
+    color: #fff;
 }
 /* welcome section */
 .wel_sec ul {
-  padding-left: 25px;
+    padding-left: 25px;
 }
 .wel_sec ul li {
-  list-style-image: url("../img/list_icon.png");
-  line-height: 2.5;
+    list-style-image: url("../img/list_icon.png");
+    line-height: 2.5;
 }
 /* Icon banner section */
 .i_ban {
-  background-color: #000;
+    background-color: #000;
 }
 /* Products section */
 .product {
-  position: relative;
+    position: relative;
 }
 .product .price {
-  padding: 10px 30px;
-  background-color: #dc3545;
-  border-radius: 10px;
-  position: absolute;
-  left: 20px;
-  bottom: 10px;
-  color: #fff;
-  font-weight: bold;
-  font-size: 22px;
+    padding: 10px 30px;
+    background-color: #dc3545;
+    border-radius: 10px;
+    position: absolute;
+    left: 20px;
+    bottom: 10px;
+    color: #fff;
+    font-weight: bold;
+    font-size: 20px;
 }
 /* footer section */
 .footer {
-  padding: 50px 0;
-  background-color: #343434;
+    padding: 50px 0 30px 0;
+    background-color: #343434;
+}
+.footer .border-bottom{
+    border-color: #6c757d!important;
+}
+.footer .text-decoration-underline{
+    text-underline-offset: 8px;
+}
+.footer .f_ti{
+    font-family: 'Teko', sans-serif;
+    font-size: 30px;
 }
 .footer h4,
 .footer p,
 .footer i,
 .footer span,
 .footer a {
-  color: #fff;
-  text-decoration: none;
+    color: #fff;
+    text-decoration: none;
+}
 
-}
-.footer a{
-    display: block;
-}
-.footer ul{
+.footer ul {
     padding-left: 0;
 }
-.footer li{
+.footer li {
     list-style: none;
-    line-height: 3;
+    line-height: 1;
+    margin-bottom: 20px;
 }
-.footer .fa{
+.footer .fa-map-marker {
+    font-size: 28px;
+}
+.footer .fa-mobile{
     font-size: 30px;
 }
-@media only screen and (max-width: 991px) {
+.footer .fa-envelope{
+    font-size: 20px;
 }
+.footer_bot .fb{
+    background-color: #415b9e;
+    border-color: #415b9e;
+}
+.footer_bot .twi{
+    background-color: #47aae4;
+    border-color: #47aae4;
+}
+.footer_bot .you{
+    background-color: #c3211e;
+    border-color: #c3211e;
+}
+.footer_bot .goog{
+    background-color: #ed401a;
+    border-color: #ed401a;
+}
+.footer_bot .rss{
+    background-color: #e97c1b;
+    border-color: #e97c1b;
+}
+
+
 @media only screen and (max-width: 576px) {
-  .bann {
-    height: 600px;
-  }
+    .bann {
+        height: 600px;
+    }
+    .footer_bot .btn-primary{
+        width: 100%;
+    }
 }

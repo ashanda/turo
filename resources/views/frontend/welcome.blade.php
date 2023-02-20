@@ -196,11 +196,11 @@
                   </div>
                   <div class="pro_det">
                     <div class="row m-0 p-3 bg-dark">
-                      <div class="col"><h5 class="text-light">2017</h5></div>
-                      <div class="col"><h5 class="text-light">1000km</h5></div>
-                      <div class="col"><h5 class="text-light">Petrol</h5></div>
-                      <div class="col"><h5 class="text-light">Automatic</h5></div>
-                      <div class="col"><h5 class="text-light">500</h5></div>
+                      <div class="col"><h6 class="text-light">2017</h5></div>
+                      <div class="col"><h6 class="text-light">1000km</h5></div>
+                      <div class="col"><h6 class="text-light">Petrol</h5></div>
+                      <div class="col"><h6 class="text-light">Automatic</h5></div>
+                      <div class="col"><h6 class="text-light">500</h5></div>
                     </div>
                   </div>
                   <div class="prod_name text-center pt-4">
@@ -214,11 +214,11 @@
                   </div>
                   <div class="pro_det">
                     <div class="row m-0 p-3 bg-dark">
-                      <div class="col"><h5 class="text-light">2017</h5></div>
-                      <div class="col"><h5 class="text-light">1000km</h5></div>
-                      <div class="col"><h5 class="text-light">Petrol</h5></div>
-                      <div class="col"><h5 class="text-light">Automatic</h5></div>
-                      <div class="col"><h5 class="text-light">500</h5></div>
+                      <div class="col"><h6 class="text-light">2017</h5></div>
+                      <div class="col"><h6 class="text-light">1000km</h5></div>
+                      <div class="col"><h6 class="text-light">Petrol</h5></div>
+                      <div class="col"><h6 class="text-light">Automatic</h5></div>
+                      <div class="col"><h6 class="text-light">500</h5></div>
                     </div>
                   </div>
                   <div class="prod_name text-center pt-4">
@@ -232,11 +232,11 @@
                   </div>
                   <div class="pro_det">
                     <div class="row m-0 p-3 bg-dark">
-                      <div class="col"><h5 class="text-light">2017</h5></div>
-                      <div class="col"><h5 class="text-light">1000km</h5></div>
-                      <div class="col"><h5 class="text-light">Petrol</h5></div>
-                      <div class="col"><h5 class="text-light">Automatic</h5></div>
-                      <div class="col"><h5 class="text-light">500</h5></div>
+                      <div class="col"><h6 class="text-light">2017</h5></div>
+                      <div class="col"><h6 class="text-light">1000km</h5></div>
+                      <div class="col"><h6 class="text-light">Petrol</h5></div>
+                      <div class="col"><h6 class="text-light">Automatic</h5></div>
+                      <div class="col"><h6 class="text-light">500</h5></div>
                     </div>
                   </div>
                   <div class="prod_name text-center pt-4">
@@ -250,11 +250,11 @@
                   </div>
                   <div class="pro_det">
                     <div class="row m-0 p-3 bg-dark">
-                      <div class="col"><h5 class="text-light">2017</h5></div>
-                      <div class="col"><h5 class="text-light">1000km</h5></div>
-                      <div class="col"><h5 class="text-light">Petrol</h5></div>
-                      <div class="col"><h5 class="text-light">Automatic</h5></div>
-                      <div class="col"><h5 class="text-light">500</h5></div>
+                      <div class="col"><h6 class="text-light">2017</h5></div>
+                      <div class="col"><h6 class="text-light">1000km</h5></div>
+                      <div class="col"><h6 class="text-light">Petrol</h5></div>
+                      <div class="col"><h6 class="text-light">Automatic</h5></div>
+                      <div class="col"><h6 class="text-light">500</h5></div>
                     </div>
                   </div>
                   <div class="prod_name text-center pt-4">
@@ -268,11 +268,11 @@
                   </div>
                   <div class="pro_det">
                     <div class="row m-0 p-3 bg-dark">
-                      <div class="col"><h5 class="text-light">2017</h5></div>
-                      <div class="col"><h5 class="text-light">1000km</h5></div>
-                      <div class="col"><h5 class="text-light">Petrol</h5></div>
-                      <div class="col"><h5 class="text-light">Automatic</h5></div>
-                      <div class="col"><h5 class="text-light">500</h5></div>
+                      <div class="col"><h6 class="text-light">2017</h5></div>
+                      <div class="col"><h6 class="text-light">1000km</h5></div>
+                      <div class="col"><h6 class="text-light">Petrol</h5></div>
+                      <div class="col"><h6 class="text-light">Automatic</h5></div>
+                      <div class="col"><h6 class="text-light">500</h5></div>
                     </div>
                   </div>
                   <div class="prod_name text-center pt-4">
@@ -286,11 +286,11 @@
                   </div>
                   <div class="pro_det">
                     <div class="row m-0 p-3 bg-dark">
-                      <div class="col"><h5 class="text-light">2017</h5></div>
-                      <div class="col"><h5 class="text-light">1000km</h5></div>
-                      <div class="col"><h5 class="text-light">Petrol</h5></div>
-                      <div class="col"><h5 class="text-light">Automatic</h5></div>
-                      <div class="col"><h5 class="text-light">500</h5></div>
+                      <div class="col"><h6 class="text-light">2017</h5></div>
+                      <div class="col"><h6 class="text-light">1000km</h5></div>
+                      <div class="col"><h6 class="text-light">Petrol</h5></div>
+                      <div class="col"><h6 class="text-light">Automatic</h5></div>
+                      <div class="col"><h6 class="text-light">500</h5></div>
                     </div>
                   </div>
                   <div class="prod_name text-center pt-4">

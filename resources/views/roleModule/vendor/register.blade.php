@@ -57,7 +57,7 @@
                 <div class="mb-3">
                   <label for="company_reg_certificate" class="form-label">Company register certificate</label>
                   <input
-                    type="text"
+                    type="file"
                     class="form-control"
                     id="company_reg_certificate"
                     name="company_reg_certificate"
@@ -93,7 +93,7 @@
                 <div class="mb-3">
                   <label for="rent_car_certificate" class="form-label">Rent car certificate</label>
                   <input
-                    type="text"
+                    type="file"
                     class="form-control"
                     id="rent_car_certificate"
                     name="rent_car_certificate"
@@ -129,7 +129,7 @@
                 <div class="mb-3">
                   <label for="chamber_of_commerce_certificate" class="form-label">Chamber of commerce certificate</label>
                   <input
-                    type="text"
+                    type="file"
                     class="form-control"
                     id="chamber_of_commerce_certificate"
                     name="chamber_of_commerce_certificate"

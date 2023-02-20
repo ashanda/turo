@@ -91,7 +91,7 @@
                 <div class="mb-3">
                   <label for="passport_photo" class="form-label">Passport photo</label>
                   <input
-                    type="text"
+                    type="file"
                     class="form-control"
                     id="passport_photo"
                     name="passport_photo"
@@ -115,7 +115,7 @@
                 <div class="mb-3">
                   <label for="nic_front" class="form-label">NIC front</label>
                   <input
-                    type="text"
+                    type="file"
                     class="form-control"
                     id="nic_front"
                     name="nic_front"
@@ -127,7 +127,7 @@
                 <div class="mb-3">
                   <label for="nic_back" class="form-label">NIC back</label>
                   <input
-                    type="text"
+                    type="file"
                     class="form-control"
                     id="nic_back"
                     name="nic_back"
@@ -151,7 +151,7 @@
                 <div class="mb-3">
                   <label for="driving_license_front" class="form-label">Driving license front</label>
                   <input
-                    type="text"
+                    type="file"
                     class="form-control"
                     id="driving_license_front"
                     name="driving_license_front"
@@ -163,7 +163,7 @@
                 <div class="mb-3">
                   <label for="driving_license_back" class="form-label">Driving license back</label>
                   <input
-                    type="text"
+                    type="file"
                     class="form-control"
                     id="driving_license_back"
                     name="driving_license_back"
@@ -175,7 +175,7 @@
                 <div class="mb-3">
                   <label for="driving_license_expire_date" class="form-label">Driving license expire date</label>
                   <input
-                    type="text"
+                    type="date"
                     class="form-control"
                     id="driving_license_expire_date"
                     name="driving_license_expire_date"
