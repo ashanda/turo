@@ -33,6 +33,9 @@ Route::get('/', function () {
     $s = VehicleMake::all();
     return view('frontend.welcome',compact('s'));
 });
+Route::get('/single', function () {
+    return view('frontend.single');
+});
 
 Route::get('/ajax-subcat',function (Request $request) {
     $cat_id = $request->cat_id;
