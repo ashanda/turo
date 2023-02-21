@@ -260,17 +260,21 @@
             <span class="h1">4.89</span> <span> <i class="fa fa-star" aria-hidden="true"></i></span>
             <p>(80 ratings)</p>
             <p class="fw-bold text-muted"><small>REVIEWS</small></p>
-            <div class="single_review">
+            <div class="single_review border-bottom">
               <div class="row">
-                <div class="col-2">
+                <div class="col-1">
                   <img src="{{ asset('assets/img/user_icon.png')}}" alt="" class="img-fluid">
                 </div>
-                <div class="col-10">
-                  <span class="fa fa-star checked"></span>
-                  <span class="fa fa-star checked"></span>
-                  <span class="fa fa-star checked"></span>
-                  <span class="fa fa-star"></span>
-                  <span class="fa fa-star"></span>
+                <div class="col-11">
+                  <div class="star">
+                    <span class="fa fa-star"></span>
+                    <span class="fa fa-star"></span>
+                    <span class="fa fa-star"></span>
+                    <span class="fa fa-star"></span>
+                    <span class="fa fa-star"></span>
+                  </div>
+                  <p class="mb-1"><small>User Name <span class="text-muted">Feb 19, 2023</span></small></p>
+                  <p>Wonderful service and timely communication! Thank you!</p>
                 </div>
               </div>
             </div>

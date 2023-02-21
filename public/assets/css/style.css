@@ -178,4 +178,10 @@ a.text-theme:hover {
     border-radius: 20px;
     box-shadow: 0 2px 5px 0 rgb(0 0 0 / 13%);
 }
-
+/* Cars page styles */
+.cars_banner{
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 400px;
+}
