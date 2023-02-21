@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Vehicle;
+use App\Models\VehicleMake;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
@@ -37,12 +38,12 @@ class VehicleController extends Controller
      */
     public function create()
     {
-        $categorys = DB::table('users')->get();
-        $types =  DB::table('users')->get();
-        $features = DB::table('users')->get();
-        $experinces =  DB::table('users')->get();
-        
-        return view('vehicleModule.vehicle.create',compact('categorys','types','features','experinces'));
+        $categories = DB::table('vehicle_categories')->get();
+        $types =  DB::table('vehicle_types')->get();
+        $features = DB::table('vehicle_features')->get();
+        $experinces =  DB::table('vehicle_experiences')->get();
+        $makes = VehicleMake::all();
+        return view('vehicleModule.vehicle.create',compact('categories','types','features','experinces','makes'));
     }
 
     /**

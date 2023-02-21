@@ -63,6 +63,7 @@
     <!--! Template customizer & Theme config files MUST be included after core stylesheets and helpers.js in the <head> section -->
     <!--? Config:  Mandatory theme config file contain global vars & default theme options, Set your preferred theme option in this file.  -->
     <script src="{{ asset('assets/js/config.js') }}"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.2.0/css/datepicker.min.css" rel="stylesheet">
   </head>
 
   <body>
@@ -124,6 +125,7 @@
   
 
   <!-- Core JS -->
+
   <!-- build:js assets/vendor/js/core.js -->
   <script src="{{ asset('assets/vendor/libs/jquery/jquery.js') }}"></script>
   <script src="{{ asset('assets/vendor/libs/popper/popper.js') }}"></script>
@@ -144,6 +146,7 @@
 
   <!-- Place this tag in your head or just before your close body tag. -->
   <script async defer src="https://buttons.github.io/buttons.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.2.0/js/bootstrap-datepicker.min.js"></script>
   <script>
 
     $( document ).ready(function() {
@@ -158,6 +161,41 @@
         }
     })
   });
+  </script>
+  <script>
+    $(document).ready(function() {
+      $('#category').on('change', function(e) {
+        console.log(e);
+        var cat_id = e.target.value;
+        //console.log(cat_id);
+        //ajax
+        $.get('/ajax-subcat?cat_id=' + cat_id, function(data) {
+          //success data
+          console.log(data);
+          var subcat = $('#subcategory').empty();
+          $.each(data, function(create, subcatObj) {
+            var option = $('<option/>', {
+              id: create,
+              value: subcatObj
+            });
+            subcat.append('<option value ="' + subcatObj['id'] + '">' + subcatObj['model'] + '</option>');
+          });
+        });
+      });
+      
+    });
+  </script>
+ <script>
+  $(document).ready(function(){
+    $("#datepicker").datepicker({
+       format: "yyyy",
+       viewMode: "years", 
+       minViewMode: "years",
+       autoclose:true
+    });   
+  })
+  
+  
   </script>
 </body>
 </html>     

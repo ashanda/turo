@@ -17,6 +17,7 @@ return new class extends Migration
             $table->id();
             $table->integer('vendor_id');
             $table->string('name');
+            $table->string('slug')->unique();
             $table->string('make');
             $table->string('model');
             $table->string('description');
