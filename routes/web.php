@@ -12,6 +12,7 @@ use App\Http\Controllers\VehicleModelController;
 use App\Http\Controllers\VehicleCategoryController;
 use App\Http\Controllers\VehicleTypeController;
 use App\Http\Controllers\VehicleController;
+use App\Http\Controllers\TripController;
 use App\Models\VehicleMake;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
@@ -47,7 +48,7 @@ Route::get('user/logout', [UserAuthController::class, 'logout'])->name('user.log
 Route::post('user/login', [UserAuthController::class, 'handleLogin'])->name('user.handleLogin');
 
 Route::middleware(['auth:web'])->group(function () {
-    
+    Route::resource('user/trip', TripController::class);
 });
 
 
