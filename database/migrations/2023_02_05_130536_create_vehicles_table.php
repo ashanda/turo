@@ -16,7 +16,7 @@ return new class extends Migration
         Schema::create('vehicles', function (Blueprint $table) {
             $table->id();
             $table->integer('vendor_id');
-            $table->string('name');
+            $table->string('title');
             $table->string('slug')->unique();
             $table->string('make');
             $table->string('model');
@@ -28,6 +28,8 @@ return new class extends Migration
             $table->integer('no_seat');
             $table->string('location');
             $table->string('transmission');
+            $table->string('experince');
+            $table->string('feature');
             $table->float('regular_price', 8, 2);
             $table->float('discount_price', 8, 2);
             $table->float('user_rating', 2, 1);

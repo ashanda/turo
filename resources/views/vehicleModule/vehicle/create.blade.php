@@ -10,11 +10,12 @@
         <div class="card mb-4">
          
           <div class="card-body">
-            <form action="{{ route('vehicle.store') }}" method="POST" enctype="multipart/form-data">
+            <form action="{{ route('listing.store') }}" method="POST" enctype="multipart/form-data">
+              @csrf
               <div class="row mb-3">
-                <label class="col-sm-2 col-form-label" for="basic-default-name">Name</label>
+                <label class="col-sm-2 col-form-label" for="basic-default-name">Title</label>
                 <div class="col-sm-10">
-                  <input type="text" class="form-control" name="name" id="basic-default-name" placeholder="John Doe">
+                  <input type="text" class="form-control" name="title" id="basic-default-name" placeholder="John Doe">
                 </div>
               </div>
               <div class="row">
@@ -74,11 +75,11 @@
                 <div class="row">
                 <label class="col-sm-4 col-form-label" for="basic-default-company">Vehicle Condition</label>
                 <div class="col-sm-8">
-                  <select id="defaultSelect" class="form-select">
-                    <option>Default select</option>
-                    <option value="1">One</option>
-                    <option value="2">Two</option>
-                    <option value="3">Three</option>
+                  <select id="defaultSelect" class="form-select" name="vehicle_condition">
+                    
+                    <option value="1">Brand New</option>
+                    <option value="2">Secound Hand</option>
+                    
                   </select>
                 </div>
                 </div>
@@ -121,7 +122,7 @@
                 <div class="col-sm-8">
                   <select id="defaultSelect" class="form-select" name="experince">
                     @foreach($experinces as $experince)
-                    <option value="{{ $experince->id }}">{{ $experince->experince }}</option>
+                    <option value="{{ $experince->id }}">{{ $experince->experience }}</option>
                     @endforeach
                   </select>
                 </div>
@@ -154,19 +155,19 @@
               </div> 
             </div>
               <div class="row mb-3">
-                <label class="col-sm-2 col-form-label" for="basic-default-email">Email</label>
+                <label class="col-sm-2 col-form-label" for="basic-default-email">Regular Price</label>
                 <div class="col-sm-10">
                   <div class="input-group input-group-merge">
-                    <input type="text" id="basic-default-email" class="form-control" placeholder="john.doe" aria-label="john.doe" aria-describedby="basic-default-email2" name="email">
+                    <input type="number" id="basic-default-email" class="form-control" placeholder="10.00" step="0.01" min="1" name="regular_price">
                     
                   </div>
-                  <div class="form-text">You can use letters, numbers &amp; periods</div>
+                  
                 </div>
               </div>
               <div class="row mb-3">
-                <label class="col-sm-2 col-form-label" for="basic-default-phone">Phone No</label>
+                <label class="col-sm-2 col-form-label" for="basic-default-phone">Discount Price</label>
                 <div class="col-sm-10">
-                  <input type="text" id="basic-default-phone" class="form-control phone-mask" placeholder="658 799 8941" aria-label="658 799 8941" aria-describedby="basic-default-phone" name="phone">
+                  <input type="number" id="basic-default-phone" class="form-control phone-mask" placeholder="10.00" step="0.01" min="1" name="discount_price">
                 </div>
               </div>
               

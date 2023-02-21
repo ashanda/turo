@@ -15,7 +15,7 @@ class Vehicle extends Model
     {
         return [
             'slug' => [
-                'source' => 'name'
+                'source' => 'title'
             ]
         ];
     }

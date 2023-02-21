@@ -7,6 +7,9 @@ use App\Models\VehicleMake;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
+use RealRashid\SweetAlert\Facades\Alert;
+use Cviebrock\EloquentSluggable\Services\SlugService;
+
 class VehicleController extends Controller
 {
     /**
@@ -54,7 +57,30 @@ class VehicleController extends Controller
      */
     public function store(Request $request)
     {
-        //
+       
+       
+        $vehicle = new Vehicle;
+        $vehicle->title = $request->title;
+        $vehicle->vendor_id= auth()->user()->id;
+        $vehicle->slug = SlugService::createSlug(Vehicle::class, 'slug', $request->title);
+        $vehicle->make = $request->make;
+        $vehicle->model = $request->model;
+        $vehicle->description = $request->description;
+        $vehicle->year = $request->year;
+        $vehicle->category = $request->category;
+        $vehicle->type = $request->type;
+        $vehicle->no_seat = $request->seat;
+        $vehicle->location = $request->location;
+        $vehicle->experince = $request->experince;
+        $vehicle->vehicle_condition = $request->vehicle_condition;
+        $vehicle->feature = $request->feature;
+        $vehicle->transmission = $request->transmission;
+        $vehicle->regular_price = $request->regular_price;
+        $vehicle->discount_price = $request->discount_price;
+        $vehicle->save();
+
+            Alert::toast('Vehicle Add Sucess', 'success'); 
+            return redirect()->route('listing.index');
     }
 
     /**

@@ -18,7 +18,7 @@
               
             @foreach ($data as $vehicle)  
               <tr> 
-                <td>{{ $vehicle->name }}</td>
+                <td>{{ $vehicle->title }}</td>
                 @if ($vehicle->status==0)
                 
                 <td><span class="badge bg-label-warning me-1">Pending</span></td>
@@ -32,7 +32,7 @@
                 <td><span class="badge bg-label-primary me-1">Reject</span></td>
                 @endif
                 <td>
-                    <a class="btn rounded-pill btn-outline-primary" href="{{ route('make.edit',$vehicle->id) }}">View</a>
+                    <a class="btn rounded-pill btn-outline-primary" href="{{ route('listing.edit',$vehicle->id) }}">View</a>
                   </div>
                 </td>
               </tr>
