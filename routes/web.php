@@ -36,6 +36,9 @@ Route::get('/', function () {
 Route::get('/single', function () {
     return view('frontend.single');
 });
+Route::get('/cars', function () {
+    return view('frontend.cars');
+});
 
 Route::get('/ajax-subcat',function (Request $request) {
     $cat_id = $request->cat_id;
