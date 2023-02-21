@@ -79,14 +79,14 @@
     padding: 50px 0 30px 0;
     background-color: #343434;
 }
-.footer .border-bottom{
-    border-color: #6c757d!important;
+.footer .border-bottom {
+    border-color: #6c757d !important;
 }
-.footer .text-decoration-underline{
+.footer .text-decoration-underline {
     text-underline-offset: 8px;
 }
-.footer .f_ti{
-    font-family: 'Teko', sans-serif;
+.footer .f_ti {
+    font-family: "Teko", sans-serif;
     font-size: 30px;
 }
 .footer h4,
@@ -109,39 +109,73 @@
 .footer .fa-map-marker {
     font-size: 28px;
 }
-.footer .fa-mobile{
+.footer .fa-mobile {
     font-size: 30px;
 }
-.footer .fa-envelope{
+.footer .fa-envelope {
     font-size: 20px;
 }
-.footer_bot .fb{
+.footer_bot .fb {
     background-color: #415b9e;
     border-color: #415b9e;
 }
-.footer_bot .twi{
+.footer_bot .twi {
     background-color: #47aae4;
     border-color: #47aae4;
 }
-.footer_bot .you{
+.footer_bot .you {
     background-color: #c3211e;
     border-color: #c3211e;
 }
-.footer_bot .goog{
+.footer_bot .goog {
     background-color: #ed401a;
     border-color: #ed401a;
 }
-.footer_bot .rss{
+.footer_bot .rss {
     background-color: #e97c1b;
     border-color: #e97c1b;
 }
-
 
 @media only screen and (max-width: 576px) {
     .bann {
         height: 600px;
     }
-    .footer_bot .btn-primary{
+    .footer_bot .btn-primary {
         width: 100%;
     }
 }
+/* Single car page styles */
+#more1,
+#more2,
+#more3,
+#more4,
+#more5,
+#more6 {
+    display: none;
+}
+a.text-theme {
+    color: #dc3545;
+    text-decoration: none;
+    font-weight: bold;
+}
+a.text-theme:hover {
+    text-decoration: underline;
+}
+.single_car .fa-star {
+    color: #dc3545;
+}
+.img-cap {
+    margin: auto;
+    margin-top: -20px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 70px;
+}
+.img_cap_cont {
+    padding: 2px 12px;
+    background-color: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0 2px 5px 0 rgb(0 0 0 / 13%);
+}
+
