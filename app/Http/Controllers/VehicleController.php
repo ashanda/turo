@@ -30,10 +30,21 @@ class VehicleController extends Controller
 
             $data = DB::table('vehicles')->where('vendor_id',Auth::user()->id)->orderBy('created_at', 'desc')->get();  
             return view('vehicleModule.vehicle.index',compact('data'));
+
         }
+
+           
+        
         
     }
 
+
+    public function all_vehicles(){
+
+        $vehicles = DB::table('vehicles')->orderBy('created_at', 'desc')->get();  
+        return view('frontend.vehicle',compact('vehicles'));
+
+    }
     /**
      * Show the form for creating a new resource.
      *
@@ -89,9 +100,16 @@ class VehicleController extends Controller
      * @param  \App\Models\Vehicle  $vehicle
      * @return \Illuminate\Http\Response
      */
-    public function show(Vehicle $vehicle)
+    public function show($slug)
     {
-        //
+        $slug = Vehicle::where('slug', $slug)->first();
+        return view('frontend.single', ['vehicle' => $slug]);
+    }
+
+    public function show_vehicle($slug)
+    {
+        $slug = Vehicle::where('slug', $slug)->first();
+        return view('frontend.single', ['vehicle' => $slug], compact('slug'));
     }
 
     /**
