@@ -29,16 +29,15 @@ use Illuminate\Http\Request;
 | contains the "web" middleware group. Now create something great!
 |
 */
+//frontend routs
 Route::get('/', function () {
     $s = VehicleMake::all();
     return view('frontend.welcome',compact('s'));
 });
-Route::get('/single', function () {
-    return view('frontend.single');
-});
-Route::get('/cars', function () {
-    return view('frontend.cars');
-});
+
+
+Route::get('/vehicles', [VehicleController::class, 'all_vehicles'])->name('vehicle.all_vehicles');
+Route::get('/vehicle/{slug}', [VehicleController::class, 'show_vehicle'])->name('vehicle.show_single');
 
 Route::get('/ajax-subcat',function (Request $request) {
     $cat_id = $request->cat_id;
@@ -46,6 +45,8 @@ Route::get('/ajax-subcat',function (Request $request) {
     return Response::json($subcategories);
 });
 
+
+//user routes
 Route::get('user/', [UserAuthController::class, 'index'])->name('user.home')->middleware("auth:web");
 Route::get('user/login', [UserAuthController::class, 'login'])->name('user.login');
 Route::get('user/register', [UserAuthController::class, 'register'])->name('user.register');
@@ -60,7 +61,7 @@ Route::middleware(['auth:web'])->group(function () {
 
 
 
-
+//vendor routes
 Route::get('vendors/', [VendorAuthController::class, 'index'])->name('vendor.home')->middleware('auth:webvendor');
 Route::get('vendors/login', [VendorAuthController::class, 'login'])->name('vendor.login');
 Route::get('vendors/register', [VendorAuthController::class, 'register'])->name('vendor.register');
@@ -74,7 +75,7 @@ Route::middleware(['auth:webvendor'])->group(function () {
 
 
 
-
+//admin routes
 Route::get('admin/', [AdminAuthController::class, 'index'])->name('admin.home')->middleware('auth:webadmin');  
 Route::get('admin/login', [AdminAuthController::class, 'login'])->name('admin.login');
 Route::post('admin/login', [AdminAuthController::class, 'handleLogin'])->name('admin.handleLogin');

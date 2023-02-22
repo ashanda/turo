@@ -12,6 +12,7 @@
     <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="6" aria-label="Slide 7"></button>
     <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="7" aria-label="Slide 8"></button>
   </div>
+  
   <div class="carousel-inner">
     <div class="carousel-item active">
       <img src="{{ asset('assets/img/car1.jpg')}}" class="d-block w-100" alt="...">
@@ -54,7 +55,7 @@
       <div class="col-sm-12 col-md-12 col-lg-7">
         <div class="title">
           <h1 class="fw-bold">
-            Chevrolet Camaro 2017
+            {{ $slug->title }}
           </h1>
           <h6 class="text-muted fw-light">1LS</h6>
           <span class="fw-bold h4">4.89</span> <span><i class="fa fa-star fa-2x align-top" aria-hidden="true"></i></span> &nbsp; <span class="align-text-bottom">(124 trips)</span>
@@ -78,7 +79,7 @@
                 <path d="M19.67 21.45H7.27c-1.33 0-2.5-.85-2.91-2.1l-2.2-6.68c-.38-1.14-.05-2.4.83-3.21l6.08-5.63c.8-.75 2.28-1.33 3.38-1.33h8.92c.35 0 .62.28.62.62 0 .34-.28.62-.62.62h-8.92c-.78 0-1.96.46-2.53.99l-6.09 5.64c-.52.48-.71 1.23-.49 1.9l2.2 6.68c.25.75.94 1.25 1.72 1.25h12.4c.59 0 1.07-.48 1.07-1.07V5.51c0-.34.28-.62.62-.62.34 0 .62.28.62.62v13.61a2.3 2.3 0 0 1-2.3 2.33Z" fill="#121214"></path>
                 <path fill-rule="evenodd" clip-rule="evenodd" d="M18.15 11.33H6.92c-.7 0-.93-.39-1-.56-.06-.17-.16-.62.35-1.1l4.27-4.03c.46-.43 1.27-.76 1.9-.76h5.71c.81 0 1.47.66 1.47 1.47v3.51c0 .81-.66 1.47-1.47 1.47Zm-10.5-1.25h10.5c.13 0 .22-.1.22-.22v-3.5c0-.12-.1-.22-.22-.22h-5.71c-.31 0-.82.2-1.04.42l-3.75 3.52Z" fill="#121214"></path>
                 <path d="M17.04 13.72h1.95c.35 0 .62-.28.62-.62 0-.34-.27-.62-.62-.62h-1.95c-.34 0-.62.28-.62.62 0 .34.27.62.62.62Z" fill="#121214"></path>
-              </svg> &nbsp; <span>2 door</span>
+              </svg> &nbsp; <span> {{ $slug->no_seat }}</span>
             </div>
           </div>
           <div class="mt-4">
@@ -136,7 +137,7 @@
           </div>
           <div class="mt-4">
             <p class="fw-bold"><small>DESCRIPTION</small></p>
-            <p>This is an automatic transmission</p>
+            <p>{{ $slug->description }}</p>
             <p id="more1">Turn heads while you cruise down the highway in this blacked out beast. Upgraded and blacked out rims match the shiny gloss black body. This summer, drop the top with the push of a button and fill all eyes on you in the California sun.
               <br>
               Fastrak Toll Tag# : 1010000984937
