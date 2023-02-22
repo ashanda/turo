@@ -147,6 +147,10 @@
   <!-- Place this tag in your head or just before your close body tag. -->
   <script async defer src="https://buttons.github.io/buttons.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.2.0/js/bootstrap-datepicker.min.js"></script>
+
+  <!-- Custom scripts 23/2/22-->
+  <script src="{{ asset('assets/js/script.js') }}"></script>
+
   <script>
 
     $( document ).ready(function() {

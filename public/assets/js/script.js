@@ -36,3 +36,20 @@ function showSec3() {
         btnText3.innerHTML = "More";
     }
 }
+
+// vendor upload image show script
+function previewImage(previewId, imageId) {
+    var preview = document.getElementById(previewId);
+    var image = document.getElementById(imageId).files[0];
+    var reader = new FileReader();
+
+    reader.onloadend = function () {
+        preview.src = reader.result;
+    };
+
+    if (image) {
+        reader.readAsDataURL(image);
+    } else {
+        preview.src = "";
+    }
+}
