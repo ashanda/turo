@@ -165,8 +165,8 @@
           <a href="" target="" class="fb btn btn-primary mx-0 mx-sm-2 px-4 py-2">Facebook</a>
           <a href="" class="twi btn btn-primary mx-0 mx-sm-2 px-4 py-2 mt-2 mt-sm-0">Twitter</a>
           <a href="" class="you btn btn-primary mx-0 mx-sm-2 px-4 py-2 mt-2 mt-sm-0">Youtube</a>
-          <a href="" class="goog btn btn-primary mx-0 mx-sm-2 px-4 py-2 mt-2 mt-sm-0">Google+</a>
-          <a href="" class="rss btn btn-primary mx-0 mx-sm-2 px-4 py-2 mt-2 mt-sm-0">Rss Feed</a>
+          <!-- <a href="" class="goog btn btn-primary mx-0 mx-sm-2 px-4 py-2 mt-2 mt-sm-0">Google+</a>
+          <a href="" class="rss btn btn-primary mx-0 mx-sm-2 px-4 py-2 mt-2 mt-sm-0">Rss Feed</a> -->
         </div>
       </div>
       <div class="copy text-center pt-5">

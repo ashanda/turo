@@ -1,4 +1,13 @@
 /* Common CSS */
+a{
+    text-decoration: none   ;
+}
+.form-control:focus,
+.form-select:focus {
+    border-color: #000000;
+    box-shadow: 0 0 0 0.2rem rgb(0 0 0 / 25%);
+}
+
 .bg-trans {
     background-color: rgba(255, 255, 255, 0.253) !important;
 }
@@ -43,9 +52,14 @@
     border-radius: 50%;
     padding: 0;
 }
-.fa-play-circle-o {
+.fa-play-circle {
     background-color: #dc3545;
     color: #fff;
+}
+/* top form */
+#loc option:active {
+    background-color: #000 !important;
+    color: #ffffff;
 }
 /* welcome section */
 .wel_sec ul {
@@ -62,6 +76,10 @@
 /* Products section */
 .product {
     position: relative;
+    transition: 0.5s;
+}
+.product:hover {
+    opacity: 0.9;
 }
 .product .price {
     padding: 10px 30px;
@@ -153,6 +171,9 @@
 #more6 {
     display: none;
 }
+.bg-theme{
+    background-color:#dc3545 !important;
+}
 a.text-theme {
     color: #dc3545;
     text-decoration: none;
@@ -179,9 +200,76 @@ a.text-theme:hover {
     box-shadow: 0 2px 5px 0 rgb(0 0 0 / 13%);
 }
 /* Cars page styles */
-.cars_banner{
+.cars_banner {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     height: 400px;
+}
+.filter_form {
+    background-color: #d5d5d5;
+    padding: 10px;
+}
+.detl {
+    text-align: center;
+}
+@media only screen and (max-width: 1300px) and (min-width: 991px) {
+    .product .price {
+        font-size: 12px;
+        padding: 5px 20px;
+        left: 10px;
+        bottom: 0;
+    }
+    .detl {
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+    .detl h6 {
+        font-size: 1.3vw;
+    }
+}
+@media only screen and (max-width: 1500px) and (min-width: 991px) {
+    .cars_content .product .price {
+        font-size: 12px;
+        padding: 5px 20px;
+        left: 10px;
+        bottom: 0;
+    }
+    .cars_content .detl {
+        padding-left: 2px;
+        padding-right: 2px;
+    }
+    .cars_content .detl h6 {
+        font-size: 1vw;
+    }
+}
+@media only screen and (max-width: 991px) and (min-width: 576px) {
+    .product .price {
+        font-size: 12px;
+        padding: 5px 20px;
+        left: 10px;
+        bottom: 0;
+    }
+    .detl {
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+    .detl h6 {
+        font-size: 1.8vw;
+    }
+}
+@media only screen and (max-width: 576px) {
+    .product .price {
+        font-size: 3vw;
+        padding: 2vw 5vw;
+        left: 4vw;
+        bottom: 0;
+    }
+    .detl {
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+    .detl h6 {
+        font-size: 3vw;
+    }
 }
