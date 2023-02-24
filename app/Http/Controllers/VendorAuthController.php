@@ -37,13 +37,30 @@ class VendorAuthController extends Controller
         $vendor->company_name = $request->company_name;
         $vendor->company_reg_no = $request->company_reg_no;
         $vendor->profile_pic = 'avatar.png';
-        $vendor->company_reg_certificate = $request->company_reg_certificate;
+        if($request->file('company_reg_certificate')){
+            $file= $request->file('company_reg_certificate');
+            $filename= date('YmdHi').$file->getClientOriginalName();
+            $file-> move(public_path('/hosts/company_reg_certificate'), $filename);
+            $vendor->company_reg_certificate = $filename;
+        }
         $vendor->location = $request->location;
         $vendor->rent_car_license = $request->rent_car_license;
-        $vendor->rent_car_certificate = $request->rent_car_certificate;
+
+        if($request->file('rent_car_certificate')){
+            $file= $request->file('rent_car_certificate');
+            $filename= date('YmdHi').$file->getClientOriginalName();
+            $file-> move(public_path('/hosts/rent_car_certificate'), $filename);
+            $vendor->rent_car_certificate = $filename;
+        }
         $vendor->contact_person = $request->contact_person;
         $vendor->contact_no = $request->contact_no;
-        $vendor->chamber_of_commerce_certificate = $request->chamber_of_commerce_certificate;
+;
+        if($request->file('chamber_of_commerce_certificate')){
+            $file= $request->file('chamber_of_commerce_certificate');
+            $filename= date('YmdHi').$file->getClientOriginalName();
+            $file-> move(public_path('/hosts/chamber_of_commerce_certificate'), $filename);
+            $vendor->chamber_of_commerce_certificate = $filename;
+        }
         $vendor->save();
 
         Alert::success('Success', 'Your Data Send to Admin and Wait for the Approve');
@@ -67,5 +84,10 @@ class VendorAuthController extends Controller
         Auth::guard('webvendor')->logout();
 
         return redirect()->route('vendor.login');
+    }
+
+    public function profile(){
+        $profile_data = Vendor::where('id', Auth::user()->id)->first();
+        return view('roleModule.vendor.profile',compact('profile_data'));
     }
 }

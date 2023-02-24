@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Vehicle;
+use App\Models\Vendor;
 use App\Models\VehicleMake;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -109,7 +110,8 @@ class VehicleController extends Controller
     public function show_vehicle($slug)
     {
         $slug = Vehicle::where('slug', $slug)->first();
-        return view('frontend.single', ['vehicle' => $slug], compact('slug'));
+        $vendor = Vendor::where('id',$slug->vendor_id)->first();
+        return view('frontend.single', ['vehicle' => $slug], compact('slug','vendor'));
     }
 
     /**

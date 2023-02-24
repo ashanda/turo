@@ -5,7 +5,8 @@
   <div class="bann_filter p-5">
     <div class="container">
       <div class="filt bg-danger p-4">
-        <form action="">
+        <form action="{{ route('search') }}" method="POST" >
+          @csrf
           <div class="row">
             <!-- <div class="col-sm-6 col-md-6 col-lg-3">
               <label class="text-light form-label" for="">Brand</label>
@@ -53,11 +54,11 @@
             </div> -->
             <div class="col-sm-6 col-md-6 col-lg-4">
               <label class="text-light form-label" for="">From</label>
-              <input type="date" class="form-control" id="customRange1" />
+              <input type="date" class="form-control" id="customRange1" name="from"/>
             </div>
             <div class="col-sm-6 col-md-6 col-lg-4">
               <label class="text-light form-label" for="">To</label>
-              <input type="date" class="form-control" id="customRange1" />
+              <input type="date" class="form-control" id="customRange1" name="to"/>
             </div>
             <div class="col-sm-6 col-md-6 col-lg-3">
               <label class="text-light form-label" for="loc">Location</label>

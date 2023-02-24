@@ -31,14 +31,44 @@ class UserAuthController extends Controller
 
         $user->location = $request->location;
         $user->passport_no = $request->passport_no;
-        $user->passport_photo = $request->passport_photo;
-        $user->nic = $request->nic;
-        $user->nic_front = $request->nic_front;
-        $user->nic_back = $request->nic_back;
 
+        if($request->file('passport_photo')){
+            $file= $request->file('passport_photo');
+            $filename= date('YmdHi').$file->getClientOriginalName();
+            $file-> move(public_path('/users/passport_photo'), $filename);
+            $user->passport_photo = $filename;
+        }
+
+        $user->nic = $request->nic;
+
+        if($request->file('nic_front')){
+            $file= $request->file('nic_front');
+            $filename= date('YmdHi').$file->getClientOriginalName();
+            $file-> move(public_path('/users/nic_front'), $filename);
+            $user->nic_front = $filename;
+        }
+
+        if($request->file('nic_back')){
+            $file= $request->file('nic_back');
+            $filename= date('YmdHi').$file->getClientOriginalName();
+            $file-> move(public_path('/users/nic_back'), $filename);
+            $user->nic_back = $filename;
+        }
         $user->driving_license_no = $request->driving_license_no;
-        $user->driving_license_front = $request->driving_license_front;
-        $user->driving_license_back = $request->driving_license_back;
+
+        if($request->file('driving_license_front')){
+            $file= $request->file('driving_license_front');
+            $filename= date('YmdHi').$file->getClientOriginalName();
+            $file-> move(public_path('/users/driving_license_front'), $filename);
+            $user->driving_license_front = $filename;
+        }
+
+        if($request->file('driving_license_back')){
+            $file= $request->file('driving_license_back');
+            $filename= date('YmdHi').$file->getClientOriginalName();
+            $file-> move(public_path('/users/driving_license_back'), $filename);
+            $user->driving_license_back = $filename;
+        }
         $user->driving_license_expire_date = $request->driving_license_expire_date;
 
         $user->save();

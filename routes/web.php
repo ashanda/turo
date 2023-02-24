@@ -13,6 +13,7 @@ use App\Http\Controllers\VehicleCategoryController;
 use App\Http\Controllers\VehicleTypeController;
 use App\Http\Controllers\VehicleController;
 use App\Http\Controllers\TripController;
+use App\Http\Controllers\SearchController;
 use App\Models\VehicleMake;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
@@ -44,7 +45,7 @@ Route::get('/ajax-subcat',function (Request $request) {
     $subcategories = DB::table('vehicle_models')->where('id', '=',$cat_id)->get();
     return Response::json($subcategories);
 });
-
+Route::post('/search', [SearchController::class, 'search'])->name('search');
 
 //user routes
 Route::get('user/', [UserAuthController::class, 'index'])->name('user.home')->middleware("auth:web");
@@ -61,16 +62,17 @@ Route::middleware(['auth:web'])->group(function () {
 
 
 
-//vendor routes
-Route::get('vendors/', [VendorAuthController::class, 'index'])->name('vendor.home')->middleware('auth:webvendor');
-Route::get('vendors/login', [VendorAuthController::class, 'login'])->name('vendor.login');
-Route::get('vendors/register', [VendorAuthController::class, 'register'])->name('vendor.register');
-Route::post('vendors/register', [VendorAuthController::class, 'create'])->name('vendor.create');
-Route::get('vendors/logout', [VendorAuthController::class, 'logout'])->name('vendor.logout');
-Route::post('vendors/login', [VendorAuthController::class, 'handleLogin'])->name('vendor.handleLogin');
+//host routes
+Route::get('host/', [VendorAuthController::class, 'index'])->name('vendor.home')->middleware('auth:webvendor');
+Route::get('host/login', [VendorAuthController::class, 'login'])->name('vendor.login');
+Route::get('host/register', [VendorAuthController::class, 'register'])->name('vendor.register');
+Route::post('host/register', [VendorAuthController::class, 'create'])->name('vendor.create');
+Route::get('host/logout', [VendorAuthController::class, 'logout'])->name('vendor.logout');
+Route::post('host/login', [VendorAuthController::class, 'handleLogin'])->name('vendor.handleLogin');
 
 Route::middleware(['auth:webvendor'])->group(function () {
-    Route::resource('vendors/listing', VehicleController::class);
+    Route::resource('host/listing', VehicleController::class);
+    Route::get('host/profile', [VendorAuthController::class, 'profile'])->name('vendor.profile');
 });   
 
 
